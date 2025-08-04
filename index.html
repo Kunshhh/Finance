@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,51 +17,51 @@
   </head>
   <body>
     <header>
-      <img src="./assets/logo.svg" alt="Logo do site Dev Finance" />
+      <img src="./assets/logo.svg" alt="Dev Finance site logo" />
     </header>
 
     <main class="container">
       <section id="balance">
-        <h2 class="sr-only">Balanço</h2>
+        <h2 class="sr-only">Balance</h2>
 
         <div class="card">
           <h3>
-            <span>Entradas</span>
-            <img src="./assets/income.svg" alt="Imagem de entradas" />
+            <span>Income</span>
+            <img src="./assets/income.svg" alt="Income image" />
           </h3>
-          <p id="incomeDisplay">R$ 0,00</p>
+          <p id="incomeDisplay">₹ 0.00</p>
         </div>
 
         <div class="card">
           <h3>
-            <span>Saídas</span>
-            <img src="./assets/expense.svg" alt="Imagem de saídas" />
+            <span>Expenses</span>
+            <img src="./assets/expense.svg" alt="Expense image" />
           </h3>
-          <p id="expenseDisplay">R$ 0,00</p>
+          <p id="expenseDisplay">₹ 0.00</p>
         </div>
 
         <div class="card total">
           <h3>
             <span>Total</span>
-            <img src="./assets/total.svg" alt="Imagem de total" />
+            <img src="./assets/total.svg" alt="Total image" />
           </h3>
-          <p id="totalDisplay">R$ 0,00</p>
+          <p id="totalDisplay">₹ 0.00</p>
         </div>
       </section>
 
       <section id="transaction">
-        <h2 class="sr-only">Transações</h2>
+        <h2 class="sr-only">Transactions</h2>
 
         <a href="#" onclick="Modal.open()" class="button new"
-          >+ Nova Transação</a
+          >+ New Transaction</a
         >
 
         <table id="data-table">
           <thead>
             <tr>
-              <th>Descrição</th>
-              <th>Valor</th>
-              <th>Data</th>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>Date</th>
               <th></th>
             </tr>
           </thead>
@@ -73,43 +73,42 @@
     <div class="modal-overlay">
       <div class="modal">
         <div id="form">
-          <h2>Nova Transação</h2>
+          <h2>New Transaction</h2>
           <form action="" onsubmit="Form.submit(event)">
             <div class="input-group">
-              <label class="sr-only" for="description">Descrição</label>
+              <label class="sr-only" for="description">Description</label>
               <input
                 type="text"
                 id="description"
                 name="description"
-                placeholder="Descrição"
+                placeholder="Description"
               />
             </div>
 
             <div class="input-group">
-              <label class="sr-only" for="amount">Valor</label>
+              <label class="sr-only" for="amount">Amount</label>
               <input
                 type="number"
                 step="0.01"
                 id="amount"
                 name="amount"
-                placeholder="0,00"
+                placeholder="0.00"
               />
               <small class="help"
-                >Use o sinal - (negativo) para despesas e , (vírgula) para casas
-                decimais</small
+                >Use the sign - (negative) for expenses and , (comma) for decimal places</small
               >
             </div>
 
             <div class="input-group">
-              <label class="sr-only" for="date">Data</label>
+              <label class="sr-only" for="date">Date</label>
               <input type="date" id="date" name="date" />
             </div>
 
             <div class="input-group actions">
               <a href="#" onclick="Modal.close()" class="button cancel"
-                >Cancelar</a
+                >Cancel</a
               >
-              <button>Salvar</button>
+              <button>Save</button>
             </div>
           </form>
         </div>
